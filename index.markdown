@@ -20,9 +20,9 @@ Re-arrange the blocks below so they print out a welcome message, ask for input f
 <script type="text/javascript"> 
 (function(){
   var initial = "print(&#039;Guess the Animal&#039;);\n" +
-    "guess = input(&#039;Which bear lives at the North Pole? &#039;);\n" +
+    "guess = input(&#039;Q1 Which bear lives at the North Pole? &#039;);\n" +
     "print(&#039;For bear, you answered&#039;, guess);\n" +
-    "guess = input(&#039;Which animal is the fastest? &#039;)\n" +
+    "guess = input(&#039;Q2 Which animal is the fastest? &#039;)\n" +
     "print(&#039;For fastest, you answered&#039;, guess)\n" +
     "print(Guess the Animal) #distractor\n" +
     "print(For bear you answered, guess) #distractor";
