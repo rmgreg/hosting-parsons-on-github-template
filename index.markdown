@@ -8,42 +8,46 @@ title: Multiple Parson's Problems on One Page
 # Parsons Practice
 
 ## Parsons 1 (Line Based Grader)
-Re-arrange the blocks below so they print out "Hello World!"
+Re-arrange the blocks below so they print out a welcome and then ask for input and output what was input again.
 
-<div id="p1-sortableTrash" class="sortable-code"></div>
-<div id="p1-sortable" class="sortable-code"></div>
-<div style="clear:both;"></div>
-<p>
-    <input id="p1-feedbackLink" value="Get Feedback" type="button" />
-    <input id="p1-newInstanceLink" value="Reset Problem" type="button" />
-</p>
-<script type="text/javascript">
-(function() {
-  var initial = "print(\"Hello\")\n" +
-    "print(\" \")\n" +
-    "print(\"World\")\n" +
-    "print(\"!\")";
+<div id="welcomeio-sortableTrash" class="sortable-code"></div> 
+<div id="welcomeio-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="welcomeio-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="welcomeio-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "print(&#039;Guess the Animal&#039;);\n" +
+    "guess = input(&#039;Which bear lives at the North Pole? &#039;);\n" +
+    "print(&#039;For bear, you answered&#039;, guess);\n" +
+    "guess = input(&#039;Which animal is the fastest? &#039;)\n" +
+    "print(&#039;For fastest, you answered&#039;, guess)\n" +
+    "print(Guess the Animal) #distractor\n" +
+    "print(For bear you answered, guess) #distractor";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "p1-sortable",
+    "sortableId": "welcomeio-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
-    "can_indent": false,
+    "can_indent": true,
     "x_indent": 50,
     "lang": "en",
-    "trashId": "p1-sortableTrash"
+    "show_feedback": true,
+    "trashId": "welcomeio-sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#p1-newInstanceLink").click(function(event){
-      event.preventDefault();
-      parsonsPuzzle.shuffleLines();
-  });
-  $("#p1-feedbackLink").click(function(event){
-      event.preventDefault();
-      parsonsPuzzle.getFeedback();
-  });
-})();
+  $("#welcomeio-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#welcomeio-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
 </script>
 
 
