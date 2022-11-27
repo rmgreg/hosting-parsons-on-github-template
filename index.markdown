@@ -50,6 +50,50 @@ Re-arrange the blocks below so they print out a welcome message, ask for input f
 })(); 
 </script>
 
+## Parsons 2 (Line Based Grader)
+Re-arrange the blocks below so they print out a welcome message, ask for input of length then width, calculate perimeter then area and then output perimeter and area results.
+
+
+<div id="rectanglemeasurements-sortableTrash" class="sortable-code"></div> 
+<div id="rectanglemeasurements-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="rectanglemeasurements-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="rectanglemeasurements-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "print(&#039;Calculate Perimeter &amp; Area of a Rectangle&#039;);\n" +
+    "length = int(input(&#039;Enter the Length: &#039;))\n" +
+    "width = int(input(&#039;Enter the Width: &#039;))\n" +
+    "perimeter = (2*length) + (2*width)\n" +
+    "area = length * width\n" +
+    "print(&#039;For a rectangle with length of &#039; + str(length) + &#039;and width of &#039; + str(width))\n" +
+    "print(&#039;Perimeter is &#039;, + perimeter)\n" +
+    "print(&#039;Area is &#039;, + area)";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "rectanglemeasurements-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#rectanglemeasurements-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#rectanglemeasurements-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
 ## Parsons 2 (Variable Check Grader)
 Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>) by clicking them.
 
