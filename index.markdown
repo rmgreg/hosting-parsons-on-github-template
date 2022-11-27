@@ -8,7 +8,7 @@ title: Multiple Parson's Problems on One Page
 # Parsons Practice
 
 ## Parsons 1 (Line Based Grader)
-Re-arrange the blocks below so they print out a welcome and then ask for input and output what was input again.
+Re-arrange the blocks below so they print out a welcome message, ask for input for Q1, output what was input, then do the same for Q2.
 
 <div id="welcomeio-sortableTrash" class="sortable-code"></div> 
 <div id="welcomeio-sortable" class="sortable-code"></div> 
