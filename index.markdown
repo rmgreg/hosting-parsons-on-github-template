@@ -53,7 +53,6 @@ Re-arrange the blocks below so they print out a welcome message, ask for input f
 ## Parsons 2 (Line Based Grader)
 Re-arrange the blocks below so they print out a welcome message, ask for input of length then width, calculate perimeter then area and then output perimeter and area results.
 
-
 <div id="rectanglemeasurements-sortableTrash" class="sortable-code"></div> 
 <div id="rectanglemeasurements-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -94,7 +93,7 @@ Re-arrange the blocks below so they print out a welcome message, ask for input o
 })(); 
 </script>
 
-## Parsons 2 (Variable Check Grader)
+## Parsons (Variable Check Grader)
 Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>) by clicking them.
 
 <div id="p2-sortableTrash" class="sortable-code"></div>
